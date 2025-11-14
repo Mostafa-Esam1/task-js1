@@ -5,21 +5,20 @@
 
 // console.log('welcom '  +  name  + ' your age is : '  + age) ;
 
-let orginPricee = +prompt('ادخل مبلغ الميراث  المراد توزيعه');
-let boys = +prompt('كم عدد الاولاد');
-let girls = +prompt('كم عدد البنات');
-console.log('عدد الاولاد هو : ' + boys);
-console.log('عد البنات هو : ' + girls);
-let wife = orginPricee * (1/8);
-console.log(' ميراث الزوجه : ' + wife);
- let originPriceAferWife = orginPricee - wife ;
- console.log('المبلغ المتبقي بعد نصيب الزوجه من الميراث : ' + originPriceAferWife );
- let boysShares = boys * 2;
- let girlsShares = girls * 1;
-let totalShares = boysShares + girlsShares;
-let totalPrice = originPriceAferWife / totalShares ;
-console.log(totalPrice);
-let finalPriceBoys = totalPrice * 2 ;
-let  finalPriceGirls = totalPrice * 1;
-console.log("نصيب كل ولد هو : " + finalPriceBoys );
-console.log('نصيب كل بنت هو :' +finalPriceGirls );
+let statusFan = false;
+let fanSpeed =  0
+
+function ShadElHable (){
+if(statusFan  == false){
+    statusFan = true
+    fanSpeed = 1
+    console.log("Fan open and  speed is : " +fanSpeed);
+}else if (fanSpeed < 3) {
+    fanSpeed++
+    console.log("Fan speed is  :  " + fanSpeed )
+}else{
+    statusFan =false
+    fanSpeed =0
+    console.log("Fan off  and speed is  : "  +fanSpeed)
+} 
+};
